@@ -8,14 +8,14 @@
 
 После push в `main` GitHub Actions собирает проект (вкладка **Actions**).
 
-**Один раз включите публикацию:**
+**Один раз включите публикацию (важно — именно так):**
 
 1. Репозиторий → **Settings** → **Pages**
-2. **Build and deployment** → **Source:** `Deploy from a branch`
-3. **Branch:** `gh-pages` → папка `/ (root)` → **Save**
-4. Подождите 2–5 минут и обновите ссылку выше
+2. **Source:** `Deploy from a branch`
+3. **Branch:** `main` → папка **`/docs`** (не gh-pages!)
+4. **Save** → подождите 3–5 минут
 
-Если в **Actions** пусто: **Settings → Actions → General** → разрешите workflows для репозитория.
+Готовый сайт лежит в папке `docs/` в ветке `main`.
 
 ## Запуск локально
 
