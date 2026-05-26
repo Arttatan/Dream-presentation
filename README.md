@@ -6,9 +6,16 @@
 
 **https://arttatan.github.io/Dream-presentation/**
 
-После push в `main` GitHub Actions собирает проект и публикует его (1–3 минуты).
+После push в `main` GitHub Actions собирает проект (вкладка **Actions**).
 
-Если ссылка не открывается: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+**Один раз включите публикацию:**
+
+1. Репозиторий → **Settings** → **Pages**
+2. **Build and deployment** → **Source:** `Deploy from a branch`
+3. **Branch:** `gh-pages` → папка `/ (root)` → **Save**
+4. Подождите 2–5 минут и обновите ссылку выше
+
+Если в **Actions** пусто: **Settings → Actions → General** → разрешите workflows для репозитория.
 
 ## Запуск локально
 
