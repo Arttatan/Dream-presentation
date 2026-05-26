@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #070b1b;
+}
+
+body {
+  font-family: 'Manrope', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(83, 72, 255, 0.45);
+  color: #dce8ff;
+}
+
+/* Крупная типографика для показа с ноутбука / проектора */
+@layer components {
+  /* Область контента: отступы от краёв, запас снизу под кнопки */
+  .scene-stage {
+    @apply px-6 pb-36 pt-2 pr-28 md:px-10 md:pb-40 md:pt-4 md:pr-36 lg:px-14 lg:pb-44 lg:pr-40;
+    padding-bottom: max(9rem, calc(env(safe-area-inset-bottom, 0px) + 7rem));
+  }
+
+  .scene-content {
+    @apply w-full max-w-[min(100%,42rem)] sm:max-w-[min(92vw,52rem)] lg:max-w-[min(88vw,68rem)] xl:max-w-[min(86vw,72rem)];
+  }
+
+  .scene-title {
+    @apply text-4xl font-light leading-[1.12] tracking-tight text-dream-mist md:text-[2.85rem] lg:text-[3.5rem] xl:text-[4rem];
+  }
+
+  .scene-body {
+    @apply text-lg font-normal leading-[1.65] text-dream-mist/95 md:text-[1.35rem] md:leading-[1.72] lg:text-[1.5rem] lg:leading-[1.78];
+  }
+
+  .scene-heading {
+    @apply text-2xl font-medium leading-snug text-dream-mist md:text-3xl lg:text-[2.125rem];
+  }
+
+  .scene-note {
+    @apply text-base italic text-dream-mist/60 md:text-lg lg:text-xl;
+  }
+
+  .scene-list {
+    @apply space-y-3 text-dream-mist/90 md:space-y-4;
+  }
+}
